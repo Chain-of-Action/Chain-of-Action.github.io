@@ -186,7 +186,9 @@
 </section>
 <h2 class="subtitle has-text-centered">
 </br>
-<p>Chain-of-Action reformulates Visuomotor Policy via Trajectory Autoregressive Modeling
+<p><u>TL;DR: Chain-of-Action reformulates Visuomotor Policy via Trajectory Autoregressive Modeling,</u></p>
+<p><u>generating a trajectory from distal position backward to proximal position, <br>
+which improves spatial generalization purely through modeling paradigm. </u></p>
 </p>
 <!-- <p>It first predicts a keyframe action, and then generates subsequent actions .</p> -->
 </h2>
@@ -245,13 +247,120 @@
         <!--/ Re-rendering. -->
 
         <h2 class="title is-3">Results</h2>
+        <h3 class="title is-4">60 tasks on RLBench</h3>
 
-        <h3 class="title is-4">RLbench</h3>
+        <div style="text-align: center;">
+          <img src="static/images/success_rate_improvement.png" class="interpolation-image" 
+           style="width: 100%; max-width: 900px;"
+           alt="RLBench success rate improvement" />
+        </div>
+        <p>
+          <span style="color: gray;">Average success rate: CoA 0.552, ACT 0.389, DP 0.326</span>
+        </p>
+        </br>
+      </br>
+
+
+
+<!-- 
+
+        <h3 class="title is-4">Generated trajectory visualization</h3>
         <video id="teaser" autoplay muted loop playsinline height="100%" controls>
         <source src="./static/videos/sim.mp4"
                 type="video/mp4">
         </video>
+        <p>
+          <span style="color: gray;">Rollouts are conducted in a closed-loop manner. The trajectory is regenerated at each step.</span>
+        </p> -->
 
+        <h3 class="title is-4">Generated trajectory visualization</h3>
+        <p style="margin-top: -10px;"><span style="color: gray;">Rollouts are conducted in a closed-loop manner. The trajectory is regenerated for each 1 step execution.</span></p>
+      </br>
+        <div class="video-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-bottom: 30px;">
+        
+
+          <!-- Video 1 -->
+          <div class="video-container">
+            <h4 class="title is-5">Take Lid Off Saucepan</h4>
+            <video autoplay muted loop playsinline width="100%">
+              <source src="./static/videos/take_lid_off_saucepan.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <!-- Video 2 -->
+          <div class="video-container">
+            <h4 class="title is-5">Sweep to Dustpan</h4>
+            <video autoplay muted loop playsinline width="100%">
+              <source src="./static/videos/sweep_to_dustpan.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <!-- Video 3 -->
+          <div class="video-container">
+            <h4 class="title is-5">Stack Wine</h4>
+            <video autoplay muted loop playsinline width="100%">
+              <source src="./static/videos/stack_wine.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <!-- Video 4 -->
+          <div class="video-container">
+            <h4 class="title is-5">Reach Target</h4>
+            <video autoplay muted loop playsinline width="100%">
+              <source src="./static/videos/reach_target.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <!-- Video 5 -->
+          <div class="video-container">
+            <h4 class="title is-5">Push Button</h4>
+            <video autoplay muted loop playsinline width="100%">
+              <source src="./static/videos/push_button.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <!-- Video 6 -->
+          <div class="video-container">
+            <h4 class="title is-5">Press Switch</h4>
+            <video autoplay muted loop playsinline width="100%">
+              <source src="./static/videos/press_switch.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <!-- Video 7 -->
+          <div class="video-container">
+            <h4 class="title is-5">Pick Up Cup</h4>
+            <video autoplay muted loop playsinline width="100%">
+              <source src="./static/videos/pick_up_cup.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <!-- Video 8 -->
+          <div class="video-container">
+            <h4 class="title is-5">Open Drawer</h4>
+            <video autoplay muted loop playsinline width="100%">
+              <source src="./static/videos/open_drawer.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <!-- Video 9 -->
+          <div class="video-container">
+            <h4 class="title is-5">Open Box</h4>
+            <video autoplay muted loop playsinline width="100%">
+              <source src="./static/videos/open_box.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <!-- Video 10 -->
+          <div class="video-container">
+            <h4 class="title is-5">Turn Tap</h4>
+            <video autoplay muted loop playsinline width="100%">
+              <source src="./static/videos/turn_tap.mp4" type="video/mp4">
+            </video>
+          </div>
+
+        </div>
+        
         <!-- <h3 class="title is-4">Generation Processes Visualizations</h3>
         <video id="teaser" autoplay muted loop playsinline height="100%">
         <source src="./static/videos/diffusion_processes_all.mp4"
@@ -319,8 +428,7 @@
   </div>
 </section>
 
-
-<!-- <footer class="footer">
+<footer class="footer">
   <div class="container">
     <div class="content has-text-centered">
       <a class="icon-link"
