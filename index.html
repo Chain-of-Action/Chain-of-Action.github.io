@@ -103,13 +103,13 @@
             <span class="author-block">
               <a href="https://scholar.google.com/citations?user=1qfEEwsAAAAJ&hl=en">Hanbo Zhang</a><sup>3</sup>,</span>
             <span class="author-block">
-              <a href="https://scholar.google.com/citations?user=2gwLGLUAAAAJ&hl=en">Yuchu Qin</a><sup>5</sup>,</span>
+              <a href="https://scholar.google.com/citations?user=2gwLGLUAAAAJ&hl=en">Yuchu Qin</a><sup>4</sup>,</span>
           </div>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://scholar.google.com.au/citations?user=MJRvTqYAAAAJ">Yang Li</a><sup>4</sup>,</span>
+              <a href="https://scholar.google.com.au/citations?user=MJRvTqYAAAAJ">Yang Li</a><sup>5</sup>,</span>
             <span class="author-block">
-              <a href="https://scholar.google.com.au/citations?user=xZGKQkcAAAAJ&hl=en">Jiajun Liu</a><sup>4</sup>,</span>
+              <a href="https://scholar.google.com.au/citations?user=xZGKQkcAAAAJ&hl=en">Jiajun Liu</a><sup>5</sup>,</span>
             <span class="author-block">
               <a href="http://www.taokong.org/">Tao Kong</a><sup>1</sup>,</span>
             <span class="author-block">
@@ -122,9 +122,9 @@
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>ByteDance Seed,</span>
             <span class="author-block"><sup>2</sup>The University of Adelaide,</span>
-            <span class="author-block"><sup>3</sup>National University of Singapore,</span>
-            <span class="author-block"><sup>4</sup>CSIRO,</span>
-            <span class="author-block"><sup>5</sup>Chinese Academy of Sciences</span>
+            <span class="author-block"><sup>3</sup>NUS,</span>
+            <span class="author-block"><sup>4</sup>CAS,</span>
+            <span class="author-block"><sup>5</sup>CSIRO</span>
           </div>
 
           <div class="is-size-6 publication-authors" style="margin-top: 10px;">
@@ -175,9 +175,9 @@
 </section>
 
 <section class="hero teaser">
-  <div class="container is-max-desktop">
+  <div class="container is-max-widescreen">
     <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
+      <video id="teaser" autoplay muted loop playsinline preload="auto" height="100%" width="100%" controls>
         <source src="./static/videos/coa.mp4"
                 type="video/mp4">
       </video>
@@ -222,13 +222,16 @@
     <!-- Animation. -->
     <div class="rows is-centered ">
       <div class="row is-full-width">
-        <h2 class="title is-3">Chain-of-Action</h2>
+        <h2 class="title is-3"></h2>
 
         <div class="content has-text-justified">
         <!-- <br> -->
         </div>
-        <img src="static/images/coa_overview.png" class="interpolation-image" 
-         alt="Interpolate start reference image." />
+        <div style="text-align: center;">
+          <img src="static/images/coa_overview.png" class="interpolation-image" 
+           style="width: 100%; max-width: 900px;"
+           alt="Interpolate start reference image." />
+        </div>
         </br>
         </br>
           <p>
@@ -244,7 +247,7 @@
         <h2 class="title is-3">Results</h2>
 
         <h3 class="title is-4">RLbench</h3>
-        <video id="teaser" autoplay muted loop playsinline height="100%">
+        <video id="teaser" autoplay muted loop playsinline height="100%" controls>
         <source src="./static/videos/sim.mp4"
                 type="video/mp4">
         </video>
