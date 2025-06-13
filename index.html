@@ -833,26 +833,32 @@
   </div>
 </section>
 
-
 <section class="section" id="FAQ">
   <div class="container is-max-widescreen">
-    <h2 class="title">Frequently Asked Questions</h2>
-    <div class="content">
-      <div class="faq-item">
-        <h3 class="title is-5">Is the keyframe action (i.e., goal pose) predicted or provided?</h3>
-        <p>Both the keyframe action and subsequent actions are predicted. They are unified within the same action space and generated through autoregressive modeling. The keyframe action is obtained using a learnable start-of-sequence token.</p>
-      </div>
-      <div class="faq-item">
-        <h3 class="title is-5">How does CoA differ from traditional methods (such as pose estimation and planning)?</h3> 
-        <p>CoA offers greater flexibility and can handle more complex tasks. It is environment-aware, capable of executing actions in a closed-loop manner, and does not depend on high-quality 3D perception. Overall, CoA is a visuomotor policy algorithm that can be compared to ACT and DP.</p>
-      </div>
-      <div class="faq-item">
-        <h3 class="title is-5">Have you tried providing the keyframe action to ACT?</h3> 
-        <p>Yes, we have experimented with providing the keyframe action to ACT, but the improvement was not significant. Our ablation study showed that both action chain modeling and using the keyframe action as the start of the sequence are necessary.</p>
-      </div>
-      <div class="faq-item">
-        <h3 class="title is-5">How do you ensure that the generated actions end at the gripper's starting position?</h3> 
-        <p>We design a dynamic stopping mechanism that halts the generation process once the gripper reaches its starting position.</p>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <h2 class="title is-3 has-text-centered">FAQ</h2>
+        <div class="content">
+          <div class="box">
+            <h3 class="title is-5">Is the keyframe action (i.e., goal pose) predicted or provided?</h3>
+            <p>Both the keyframe action and subsequent actions are predicted. They are unified within the same action space and generated through autoregressive modeling. The keyframe action is obtained using a learnable start-of-sequence token.</p>
+          </div>
+          
+          <div class="box">
+            <h3 class="title is-5">How does CoA differ from traditional methods (such as pose estimation and planning)?</h3>
+            <p>CoA offers greater flexibility and can handle more complex tasks. It is environment-aware, capable of executing actions in a closed-loop manner, and does not depend on high-quality 3D perception. Overall, CoA is a visuomotor policy algorithm that can be compared to ACT and DP.</p>
+          </div>
+          
+          <div class="box">
+            <h3 class="title is-5">Have you tried providing the keyframe action to ACT?</h3>
+            <p>Yes, we have experimented with providing the keyframe action to ACT, but the improvement was not significant. Our ablation study showed that both action chain modeling and using the keyframe action as the start of the sequence are necessary.</p>
+          </div>
+          
+          <div class="box">
+            <h3 class="title is-5">How do you ensure that the generated actions end at the gripper's starting position?</h3>
+            <p>We design a dynamic stopping mechanism that halts the generation process once the gripper reaches its starting position.</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
